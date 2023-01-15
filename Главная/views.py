@@ -1,6 +1,6 @@
-from flask import Blueprint, render_template, request
 import logging
 
+from flask import Blueprint, render_template, request
 from main.utils import PostHandler
 
 main_blueprint = Blueprint('main_blueprint', __name__, template_folder='templates')
