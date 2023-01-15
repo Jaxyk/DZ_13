@@ -1,6 +1,6 @@
-from flask import Blueprint, render_template, request
 import logging
 
+from flask import Blueprint, render_template, request
 from loader.utils import save_picture
 from main.utils import PostHandler
 
