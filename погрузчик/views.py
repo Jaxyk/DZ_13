@@ -23,8 +23,8 @@ def create_new_post():
 
     picture_path = save_picture(picture)
     if not picture_path:
-        logging.info('Загружено изображение!')
-        return 'Загружено изображение!'
+        logging.info('Загружено не изображение!')
+        return 'Загружено не изображение!'
 
     post_handler = PostHandler('posts.json')
     new_post = {'pic': picture_path, 'content': content}
