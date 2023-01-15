@@ -22,13 +22,13 @@ class PostHandler:
         for post in load_posts:
             if substr.lower() in post['content'].lower():
                 posts.append(post)
-        return posts
+        return posts, error
 
     def save_posts_to_json(self, posts):
         with open(self.path, 'w', encoding='utf-8') as file:
             json.dump(posts, file)
 
     def add_post(self, post):
-        posts = self.load_posts()
+        posts, error = self.load_posts()
         posts.append(post)
-        self.seve_posts_to_json(posts)
+        self.save_posts_to_json(posts)
